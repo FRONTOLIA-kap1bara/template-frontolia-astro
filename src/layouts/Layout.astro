@@ -1,0 +1,269 @@
+---
+// Main layout component for all pages
+import { ViewTransitions } from 'astro:transitions';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "FRONTOLIA Internet - 自然にインターネットを。サーバー提供やeスポーツチームの運営など、インターネット関連事業を展開する企業です。" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title} | FRONTOLIA Internet</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <ViewTransitions />
+  </head>
+  <body class="bg-light text-primary">
+    <div class="noise-overlay"></div>
+    <div class="grid-overlay"></div>
+    
+    <Navbar />
+    
+    <main>
+      <slot />
+    </main>
+    
+    <Footer />
+    
+    <!-- Initialize AOS -->
+    <script>
+      import AOS from 'aos';
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-out',
+          once: false
+        });
+      });
+    </script>
+    
+    <!-- GSAP for advanced animations -->
+    <script>
+      import { gsap } from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Animate hero section elements
+      gsap.from('.hero-title', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2
+      });
+      
+      gsap.from('.hero-subtitle', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4
+      });
+      
+      gsap.from('.hero-cta', {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        delay: 0.6
+      });
+      
+      // Animate the floating elements
+      const floatingElements = document.querySelectorAll('.floating');
+      floatingElements.forEach((el, index) => {
+        gsap.to(el, {
+          y: '20px',
+          duration: 2 + index * 0.2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power1.inOut'
+        });
+      });
+      
+      // Parallax effect for background elements
+      document.addEventListener('mousemove', (e) => {
+        const parallaxElements = document.querySelectorAll('.parallax');
+        const mouseX = e.clientX / window.innerWidth - 0.5;
+        const mouseY = e.clientY / window.innerHeight - 0.5;
+        
+        parallaxElements.forEach((el, index) => {
+          const depth = index * 0.1 + 0.1;
+          const moveX = mouseX * depth * 100;
+          const moveY = mouseY * depth * 100;
+          gsap.to(el, {
+            x: moveX,
+            y: moveY,
+            duration: 1
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --swiper-theme-color: #3B82F6;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+  
+  /* Futuristic grid overlay */
+  .grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Subtle noise texture */
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  /* Glowing effect for elements */
+  .glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+  }
+  
+  /* Futuristic button styles */
+  .btn-future {
+    position: relative;
+    background: linear-gradient(90deg, #3B82F6, #10B981);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .btn-future::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s ease;
+    z-index: -1;
+  }
+  
+  .btn-future:hover::before {
+    left: 100%;
+  }
+  
+  .btn-future:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(90deg, #3B82F6, #10B981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+  
+  /* Animated underline for links */
+  .animated-underline {
+    position: relative;
+  }
+  
+  .animated-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #3B82F6, #10B981);
+    transition: width 0.3s ease;
+  }
+  
+  .animated-underline:hover::after {
+    width: 100%;
+  }
+</style>

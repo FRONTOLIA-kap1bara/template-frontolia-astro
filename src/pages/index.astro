@@ -1,0 +1,38 @@
+---
+// Main index page that imports all components
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import NewsSlider from '../components/NewsSlider.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import NewsSection from '../components/NewsSection.astro';
+import CompanySection from '../components/CompanySection.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+// Page title and description
+const title = "FRONTOLIAインターネット - 自然にインターネットを";
+const description = "FRONTOLIAインターネットは、サーバー提供やeスポーツチームの運営など、インターネット関連事業を展開する企業です。";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section - Main visual with catchphrase -->
+  <HeroSection />
+  
+  <!-- News Slider - Featured news in slider format -->
+  <NewsSlider />
+  
+  <!-- About Section - Company philosophy -->
+  <AboutSection />
+  
+  <!-- Services Section - Business areas -->
+  <ServicesSection />
+  
+  <!-- News Section - Latest news and updates -->
+  <NewsSection />
+  
+  <!-- Company Section - Company information -->
+  <CompanySection />
+  
+  <!-- Contact Section - Contact form and information -->
+  <ContactSection />
+</Layout>

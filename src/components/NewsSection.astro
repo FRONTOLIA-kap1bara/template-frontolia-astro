@@ -1,0 +1,199 @@
+---
+// News section with latest updates
+---
+
+<section id="news" class="py-20 relative overflow-hidden">
+  <!-- Background elements -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl floating parallax"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl floating parallax"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-16">
+      <div class="inline-block px-4 py-1 bg-secondary/10 rounded-full text-secondary font-medium text-sm mb-4" data-aos="fade-up">
+        ニュース
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">
+        最新の<span class="gradient-text">お知らせ</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        FRONTOLIAインターネットの最新ニュースやプレスリリース、イベント情報をご覧いただけます。
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- News Item 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-secondary to-accent flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">
+            新サービス
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年4月15日</div>
+          <h3 class="text-xl font-bold mb-3">次世代クラウドサーバーサービスの提供開始</h3>
+          <p class="text-gray-600 mb-4">
+            FRONTOLIAインターネットは、最新技術を駆使した次世代クラウドサーバーサービス「FRONTOLIA Cloud Next」の提供を開始しました。高速処理と安定性を両立し、ビジネスの成長をサポートします。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- News Item 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            eスポーツ
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年4月3日</div>
+          <h3 class="text-xl font-bold mb-3">FRONTOLIA eスポーツチーム、国際大会で優勝</h3>
+          <p class="text-gray-600 mb-4">
+            当社が運営するeスポーツチーム「FRONTOLIA Legends」が、国際大会「World Gaming Championship」で見事優勝しました。チームの活躍に注目が集まっています。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- News Item 3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-blue-600 to-blue-400 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            企業情報
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年3月20日</div>
+          <h3 class="text-xl font-bold mb-3">新オフィスへの移転のお知らせ</h3>
+          <p class="text-gray-600 mb-4">
+            事業拡大に伴い、2025年5月より本社オフィスを東京都千代田区の新社屋へ移転することをお知らせいたします。新オフィスでは最新技術を取り入れた環境を整備します。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- News Item 4 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-green-500 to-teal-400 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            投資情報
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年3月10日</div>
+          <h3 class="text-xl font-bold mb-3">新規事業への投資拡大について</h3>
+          <p class="text-gray-600 mb-4">
+            当社は、AIを活用したネットワークセキュリティ事業への投資を拡大し、次世代のインターネットセキュリティを強化します。今後3年間で50億円の投資を予定しています。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- News Item 5 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            採用情報
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年2月25日</div>
+          <h3 class="text-xl font-bold mb-3">2025年度新卒採用情報を公開</h3>
+          <p class="text-gray-600 mb-4">
+            2025年度の新卒採用情報を公開しました。エンジニア職、マーケティング職、eスポーツマネージャー職など、多様な職種で人材を募集しています。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- News Item 6 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
+        <div class="relative">
+          <div class="aspect-video bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            イベント
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-gray-500 mb-2">2025年2月10日</div>
+          <h3 class="text-xl font-bold mb-3">FRONTOLIA TECH CONFERENCE 2025開催決定</h3>
+          <p class="text-gray-600 mb-4">
+            最新技術トレンドを紹介する年次イベント「FRONTOLIA TECH CONFERENCE 2025」を6月に東京で開催することが決定しました。参加登録は3月より開始します。
+          </p>
+          <a href="#" class="inline-flex items-center text-secondary font-medium animated-underline">
+            詳細を見る
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="#" class="btn-future inline-flex items-center">
+        すべてのニュースを見る
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
